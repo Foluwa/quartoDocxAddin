@@ -1,4 +1,4 @@
-Name: Render Active Quarto to DOCX
-Description: Render the active Quarto document directly to a Word file.
+Name: Live Preview Quarto DOCX
+Description: Live-preview the active Quarto document in the Viewer pane.
 Binding: render_active_qmd_to_docx
-Interactive: false
+Interactive: true

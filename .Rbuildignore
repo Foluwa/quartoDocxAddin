@@ -3,3 +3,5 @@
 ^\.git$
 ^\.github$
 ^\.DS_Store$
+^PLAN\.md$
+^USAGE\.md$

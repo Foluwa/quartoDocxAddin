@@ -1,42 +1,36 @@
 # quartoDocxAddin
 
-`quartoDocxAddin` is an RStudio addin for rendering the active Quarto
-document directly to a Word (`.docx`) file in an RStudio background job. It
-writes the output beside the source document without opening a browser preview
-or Microsoft Word.
-
-## Requirements
-
-- RStudio
-- Quarto
-- The `quarto` and `rstudioapi` R packages
+`quartoDocxAddin` provides a live preview of the active Quarto Word report in
+RStudio's Viewer pane. After you pause editing, it saves the `.qmd`, renders a
+DOCX in a separate R process, and refreshes the preview automatically.
 
 ## Installation
 
-The package is currently in development. After it is published on GitHub, it
-can be installed with:
-
 ```r
-install.packages("remotes")
-remotes::install_github("Foluwa/quartoDocxAddin")
+remotes::install_github(
+  "Foluwa/quartoDocxAddin",
+  auth_token = NULL,
+  upgrade = "never"
+)
 ```
+
+Restart RStudio after installation.
 
 ## Usage
 
-1. Open a `.qmd` file in RStudio.
-2. Select **Addins → Render Active Quarto to DOCX**.
-3. Follow the render in RStudio's **Jobs** pane.
-4. The generated `.docx` file will be written beside the `.qmd` file.
+1. Open and save a `.qmd` file.
+2. Select **Addins -> Live Preview Quarto DOCX**.
+3. Continue editing while the DOCX preview refreshes in the Viewer pane.
+4. Select **Close** when finished.
 
-The addin can also be assigned a keyboard shortcut through
-**Tools → Modify Keyboard Shortcuts**.
+The addin honours the document's DOCX options and `reference-doc`. The preview
+is browser-based, so final output should still be checked once in Microsoft
+Word.
 
 ## Development
 
-Install the local package while developing it with:
-
 ```r
-remotes::install_local(".")
+remotes::install_local(".", upgrade = "never")
 ```
 
 ## License

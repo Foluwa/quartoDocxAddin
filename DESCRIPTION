@@ -7,16 +7,20 @@ Authors@R:
       email = "folu.akintola@ndorms.ox.ac.uk",
       role = c("aut", "cre")
     )
-Description: Provides an RStudio addin that renders the active Quarto
-    document to Microsoft Word without opening a browser preview or the
-    generated document.
+Description: Provides an RStudio addin that watches the active Quarto
+    document, renders it to Microsoft Word, and refreshes a preview in the
+    RStudio Viewer pane.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports:
+    bslib,
+    callr,
+    htmltools,
     quarto,
-    rstudioapi
+    rstudioapi,
+    shiny
 Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
