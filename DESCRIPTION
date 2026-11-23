@@ -1,0 +1,22 @@
+Package: quartoDocxAddin
+Title: Render Quarto Documents to Word from RStudio
+Version: 0.0.0.9000
+Authors@R:
+    person(
+      "Moronfoluwa", "Akintola",
+      email = "folu.akintola@ndorms.ox.ac.uk",
+      role = c("aut", "cre")
+    )
+Description: Provides an RStudio addin that renders the active Quarto
+    document to Microsoft Word without opening a browser preview or the
+    generated document.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    quarto,
+    rstudioapi
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

@@ -1,0 +1,4 @@
+Name: Render Active Quarto to DOCX
+Description: Render the active Quarto document directly to a Word file.
+Binding: render_active_qmd_to_docx
+Interactive: false
